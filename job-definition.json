@@ -1,0 +1,25 @@
+{
+  "name": "first-job",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": "false"
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "run-sample-notebook",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Repos/databricks-intro/databricks-intro/01-setup",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {}
+    }
+  ],
+  "queue": {
+    "enabled": "true"
+  },
+  "performance_target": "PERFORMANCE_OPTIMIZED"
+}
